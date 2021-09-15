@@ -1,0 +1,19 @@
+numArray <- seq(1, 100, 3)
+number <- readline(prompt="Enter number: ")
+myNumber <- as.integer(number)
+mid <- length(numArray) %/% 2
+low <- 0
+high <- length(numArray) - 1
+while (numArray[mid] != myNumber & low <= high) {
+	if (myNUmber > numArray[mid]) {
+		low <- mid + 1
+	} else {
+		high <- mid -1
+	}
+	mid <- (low + high) %/% 2
+}
+if (low > high) {
+	print("No value")
+}elsw {
+	print("ID =", mid)
+}
